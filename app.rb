@@ -2,6 +2,7 @@ require 'sinatra'
 set :session_secret, 'super secret'
 
 get '/' do
+  @name = ['Ben', 'Jerry', 'Todd'].sample
   erb(:index)
 end
 
