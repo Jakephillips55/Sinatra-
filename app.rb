@@ -1,9 +1,8 @@
 require 'sinatra'
+set :session_secret, 'super secret'
 
 get '/' do
-  "<div style='border: 3px dashed green'>
-    <img src = 'http://bit.ly/1eze8aE'>
-    </div>"
+  erb(:index)
 end
 
 get '/secret' do
@@ -17,5 +16,3 @@ end
 get '/lama' do
   "wishes"
 end
-
-set :session_secret, 'super secret'
