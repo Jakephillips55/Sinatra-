@@ -1,7 +1,7 @@
 require 'sinatra'
 set :session_secret, 'super secret'
 
-get '/' do
+get '/random_cat' do
   @name = ['Ben', 'Jerry', 'Todd'].sample
   erb(:index)
 end
@@ -16,4 +16,9 @@ end
 
 get '/lama' do
   "wishes"
+end
+
+get '/named-cat' do
+  @name = params[:name]
+  erb(:index)
 end
